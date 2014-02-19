@@ -14,4 +14,7 @@ example = ->
   alert 'Example'
 ```
 
+```ruby
+<%= render 'some_partial' %>
+```
 <%= content_tag :p, "Paragraph created by Rails helper" %>

@@ -152,6 +152,10 @@ describe 'Post views', :type => :request do
     it 'should allow calling Rails helpers via ERB tags' do
       page.source.should match('<p>Paragraph created by Rails helper</p>')
     end
+
+    it 'should allow a rails helper inside of a code block without trying to render it' do
+      page.source.should match("<%= render 'some_partial' %>")
+    end
   end
 
   context 'Posts#feed' do
